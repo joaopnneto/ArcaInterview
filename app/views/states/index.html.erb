@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Acronym</th>
+      <th>State acronym</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +15,7 @@
     <% @states.each do |state| %>
       <tr>
         <td><%= state.name %></td>
-        <td><%= state.acronym %></td>
+        <td><%= state.state_acronym %></td>
         <td><%= link_to 'Show', state %></td>
         <td><%= link_to 'Edit', edit_state_path(state) %></td>
         <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>

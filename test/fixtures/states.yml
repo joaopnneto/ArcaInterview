@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  acronym: MyString
+  state_acronym: MyString
 
 two:
   name: MyString
-  acronym: MyString
+  state_acronym: MyString

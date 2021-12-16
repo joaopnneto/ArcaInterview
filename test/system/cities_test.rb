@@ -14,7 +14,6 @@ class CitiesTest < ApplicationSystemTestCase
     visit cities_url
     click_on "New City"
 
-    fill_in "State", with: @city.State_id
     fill_in "Name", with: @city.name
     click_on "Create City"
 
@@ -26,7 +25,6 @@ class CitiesTest < ApplicationSystemTestCase
     visit cities_url
     click_on "Edit", match: :first
 
-    fill_in "State", with: @city.State_id
     fill_in "Name", with: @city.name
     click_on "Update City"
 

@@ -14,8 +14,8 @@ class StatesTest < ApplicationSystemTestCase
     visit states_url
     click_on "New State"
 
-    fill_in "Acronym", with: @state.acronym
     fill_in "Name", with: @state.name
+    fill_in "State acronym", with: @state.state_acronym
     click_on "Create State"
 
     assert_text "State was successfully created"
@@ -26,8 +26,8 @@ class StatesTest < ApplicationSystemTestCase
     visit states_url
     click_on "Edit", match: :first
 
-    fill_in "Acronym", with: @state.acronym
     fill_in "Name", with: @state.name
+    fill_in "State acronym", with: @state.state_acronym
     click_on "Update State"
 
     assert_text "State was successfully updated"

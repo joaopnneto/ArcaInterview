@@ -3,7 +3,8 @@ class CitiesController < ApplicationController
 
   # GET /cities or /cities.json
   def index
-    @cities = City.all
+    # @cities = City.all
+    @cities = City.search(params[:search])
   end
 
   # GET /cities/1 or /cities/1.json
@@ -64,6 +65,6 @@ class CitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def city_params
-      params.require(:city).permit(:name, :State_id)
+      params.require(:city).permit(:name, :state, :search)
     end
 end

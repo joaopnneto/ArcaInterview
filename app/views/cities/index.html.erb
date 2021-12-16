@@ -2,6 +2,11 @@
 
 <h1>Cities</h1>
 
+<%= form_with(url: '/cities', method: 'get', local: true) do %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -15,7 +20,7 @@
     <% @cities.each do |city| %>
       <tr>
         <td><%= city.name %></td>
-        <td><%= city.State_id %></td>
+        <td><%= city.state %></td>
         <td><%= link_to 'Show', city %></td>
         <td><%= link_to 'Edit', edit_city_path(city) %></td>
         <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>

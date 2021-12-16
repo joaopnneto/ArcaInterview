@@ -64,6 +64,6 @@ class StatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def state_params
-      params.require(:state).permit(:name, :acronym)
+      params.require(:state).permit(:name, :state_acronym)
     end
 end
